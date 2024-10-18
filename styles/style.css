@@ -3,16 +3,16 @@
   grid-template-columns: 416px 148px 416px;
   column-gap: 36px;
   width: 1052px;
-  height: 105px;
+  min-height: 105px;
   margin: 92px 0 96px 24px;
 }
 
 .header__links-list {
-  display: grid;
-  grid-template-columns: 106px 162px 129px;
-  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-top: 44px;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 18px;
   font-weight: 400;
   text-underline-offset: 4px;
@@ -41,7 +41,7 @@
 .address {
   display: block;
   width: 240px;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 18px;
   font-weight: 400;
   text-underline-offset: 4px;
@@ -59,7 +59,7 @@
   position: relative;
   z-index: 1;
   display: block;
-  height: 757px;
+  min-height: 757px;
   background-image: url(../images/cover.jpg);
   background-size: cover;
   background-position: center;
@@ -67,13 +67,13 @@
 }
 
 .cover__title {
-  position: absolute;
-  bottom: 237px;
+  position: relative;
+  top: 165px;
   left: 50px;
   height: 355px;
   width: 1000px;
   z-index: 3;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 100px;
   font-weight: 700;
   line-height: 115px;
@@ -102,18 +102,16 @@
 }
 
 .cover__description {
-  position: absolute;
-  bottom: 62px;
+  position: relative;
+  top: 312px;
   left: 78px;
-  height: 28px;
+  min-height: 28px;
   width: 640px;
   z-index: 3;
 }
 
 .cover__deescription-text {
-  position: absolute;
-  z-index: 3;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 22px;
   font-weight: 400;
   line-height: 28px;
@@ -131,13 +129,13 @@
 }
 
 .bet-button {
-  position: absolute;
-  bottom: 51px;
+  position: relative;
+  top: 272px;
   left: 794px;
   height: 51px;
   width: 256px;
   z-index: 2;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 22px;
   font-weight: 500;
   line-height: 25.83px;
@@ -145,11 +143,12 @@
   color: white;
   text-transform: uppercase;
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid currentColor;
 }
 
 .overlay {
   position: absolute;
+  inset: 0;
   z-index: 2;
   width: 100%;
   height: 100%;
@@ -158,7 +157,7 @@
 
 .lots {
   display: block;
-  height: 692px;
+  min-height: 692px;
   margin: 0 24px 148px 24px;
 }
 
@@ -166,7 +165,7 @@
   display: block;
   margin-left: 40px;
   margin-bottom: 27px;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 46.96px;
@@ -175,7 +174,7 @@
 
 .lots__card-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   flex-wrap: wrap;
   gap: 25px;
   list-style-type: none;
@@ -185,7 +184,7 @@
   display: flex;
   justify-content: space-between;
   width: 334px;
-  height: 563px;
+  min-height: 563px;
 }
 
 .card-link {
@@ -196,7 +195,7 @@
 }
 
 .card {
-  height: 563px;
+  min-height: 563px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -221,7 +220,7 @@
 
 .card__title {
   z-index: 2;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 22px;
   font-weight: 700;
   line-height: 26.4px;
@@ -236,7 +235,7 @@
 }
 .card__text {
   z-index: 2;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
@@ -247,7 +246,7 @@
   display: block;
   margin-top: 30px;
   margin-left: 40px;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 23.48px;
@@ -260,7 +259,7 @@
   grid-template-columns: 334px 693px;
   gap: 25px;
   margin: 0 0 181px 24px;
-  height: 595px;
+  min-height: 595px;
 }
 
 .about__logo {
@@ -286,7 +285,7 @@
 
 .about__title {
   margin-bottom: 98px;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 46.96px;
@@ -294,12 +293,15 @@
 }
 
 .about__text {
-  display: grid;
-  grid-template-rows: 144px;
-  font-family: Raleway;
+  margin-bottom: 24px;
+  font-family: Raleway, sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
+}
+
+.about__column :last-child {
+  margin: 0;
 }
 
 .footer {
@@ -308,7 +310,7 @@
   column-gap: 185px;
   margin: 0 50px 88px 50px;
   width: 1000px;
-  height: 98px;
+  min-height: 98px;
 }
 
 .footer__menu {
@@ -320,7 +322,7 @@
 }
 
 .footer__menu-link {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 20px;

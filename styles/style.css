@@ -3,7 +3,6 @@
   grid-template-columns: 416px 148px 416px;
   column-gap: 36px;
   width: 1052px;
-  min-height: 105px;
   margin: 92px 0 96px 24px;
 }
 
@@ -57,8 +56,9 @@
 
 .cover {
   position: relative;
-  z-index: 1;
   display: block;
+  padding-top: 165px;
+  width: 1100px;
   min-height: 757px;
   background-image: url(../images/cover.jpg);
   background-size: cover;
@@ -68,11 +68,7 @@
 
 .cover__title {
   position: relative;
-  top: 165px;
-  left: 50px;
-  height: 355px;
-  width: 1000px;
-  z-index: 3;
+  z-index: 1;
   font-family: Raleway, sans-serif;
   font-size: 100px;
   font-weight: 700;
@@ -81,6 +77,8 @@
   text-transform: uppercase;
   color: white;
   letter-spacing: 30px;
+  width: 1000px;
+  margin-left: 50px;
 }
 
 .align-text {
@@ -103,11 +101,14 @@
 
 .cover__description {
   position: relative;
-  top: 312px;
-  left: 78px;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 77px;
   min-height: 28px;
-  width: 640px;
-  z-index: 3;
+  margin: 133px 0 0 78px;
 }
 
 .cover__deescription-text {
@@ -129,12 +130,8 @@
 }
 
 .bet-button {
-  position: relative;
-  top: 272px;
-  left: 794px;
   height: 51px;
   width: 256px;
-  z-index: 2;
   font-family: Raleway, sans-serif;
   font-size: 22px;
   font-weight: 500;
@@ -148,16 +145,13 @@
 
 .overlay {
   position: absolute;
+  z-index: 0;
   inset: 0;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .lots {
   display: block;
-  min-height: 692px;
   margin: 0 24px 148px 24px;
 }
 
@@ -259,7 +253,6 @@
   grid-template-columns: 334px 693px;
   gap: 25px;
   margin: 0 0 181px 24px;
-  min-height: 595px;
 }
 
 .about__logo {
@@ -310,7 +303,6 @@
   column-gap: 185px;
   margin: 0 50px 88px 50px;
   width: 1000px;
-  min-height: 98px;
 }
 
 .footer__menu {
